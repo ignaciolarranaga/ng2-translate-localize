@@ -1,6 +1,6 @@
 {
   "name": "ng2-translate-localize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tools for helping in localizations of Angular2 applications.",
   "main": "index",
   "files": [ "*.js", "*.ts" ],
