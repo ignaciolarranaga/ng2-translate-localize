@@ -1,4 +1,4 @@
-# Introduction
+# ng2-translate-localize
 
 In some situations you need to handle different localizations for the same language, something like:
 
@@ -20,16 +20,22 @@ es-UK.json: {
 
 where you want currency-symbol to change according to the specific spanish localization.
 
-The provided loader `LocalizableTranslateStaticLoader` if used will load the base translation and the localization
-in the adequate order for the specific localization to override the keys of the generic translation,
-so for example in the previous example you will get the correct translation for the specific locale you are using.
+The loader provided by the plugin (`LocalizableTranslateStaticLoader`) will resolve the keys prioritazing, if exists,
+the localized version. Internally it will load all the translations of base language (e.g. es.json) and override the
+ones from the current localization, which is the common scenario on application localization.
 
-In other words all the translations of es.json are going to be available and just the repeated ones overriden,
-which is the common scenario on application localization.
+## Installation
 
-# Usage
+First you need to install the npm module:
 
-The same as detailed on ng2-translate but at the time you instantiate the `TranslateStaticLoader` you use `LocalizableTranslateStaticLoader` instead.
+```
+npm install ng2-translate-localize --save
+```
+
+## Usage
+
+The same as detailed on ng2-translate, but at the time you instantiate the `TranslateStaticLoader` you use
+will `LocalizableTranslateStaticLoader` instead.
 
 ```
 @NgModule({
@@ -69,9 +75,9 @@ export function createTranslateLoader(http: Http) {
 export class AppModule { }
 ```
 
-## 2. Initialization of the TranslateService on your application:
-Later at the moment of initialize the TranslateService remember to use the localized version matching the file.
-For example:
+### 2. Initialization of the TranslateService on your application:
+At the moment of initialize the TranslateService remember to use the localized version (that should match
+one of the localization files you created). For example:
 
 ```
 import {Component} from '@angular/core';
@@ -96,8 +102,9 @@ export class AppComponent {
 }
 ```
 
-## 2. Localization files:
-Basically the same as ng2-translate but you can also add individual localization files, for example:
+### 2. Localization files:
+Identically to ng2-translate you create the translation files, but now you can also add individual localization
+files, for example:
 
 * es.json
     * es-UY.json
