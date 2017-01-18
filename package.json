@@ -1,0 +1,48 @@
+{
+  "name": "ng2-translate-localize",
+  "version": "1.0.0",
+  "description": "Tools for helping in localizations of Angular2 applications.",
+  "main": "index",
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaciolarranaga/ng2-translate-localize.git"
+  },
+  "keywords": [
+    "angular2",
+    "translation",
+    "localization",
+    "i18n"
+  ],
+  "author": "Ignacio Larrañaga <ignaciolarranaga@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ignaciolarranaga/ng2-translate-localize/issues"
+  },
+  "homepage": "https://github.com/ignaciolarranaga/ng2-translate-localize#readme",
+  "peerDependencies": {
+    "@angular/core": "^2.0.0",
+    "@angular/http": "^2.0.0",
+    "ng2-translate": "^5.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "2.3.1",
+    "@angular/compiler": "2.3.1",
+    "@angular/compiler-cli": "2.3.1",
+    "@angular/core": "2.3.1",
+    "@angular/http": "2.3.1",
+    "@angular/platform-browser": "2.3.1",
+    "@angular/platform-browser-dynamic": "2.3.1",
+    "ng2-translate": "5.0.0",
+    "rxjs": "5.0.0-rc.4",
+    "typescript": "^2.0.10",
+    "webpack": "2.1.0-beta.27",
+    "zone.js": "0.7.2"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "prepublish": "tsc"
+  }
+}

@@ -1,0 +1,1 @@
+export { LocalizableTranslateStaticLoader } from "./localizable-translate-static-loader";
