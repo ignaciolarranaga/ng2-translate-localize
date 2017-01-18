@@ -22,7 +22,7 @@ where you want currency-symbol to change according to the specific spanish local
 
 The loader provided by the plugin (`LocalizableTranslateStaticLoader`) will resolve the keys prioritazing, if exists,
 the localized version. Internally it will load all the translations of base language (e.g. es.json) and override the
-ones from the current localization, which is the common scenario on application localization.
+ones from the current localization (e.g. es-UY.json), which is the common scenario on application localization.
 
 ## Installation
 
@@ -34,8 +34,8 @@ npm install ng2-translate-localize --save
 
 ## Usage
 
-The same as detailed on ng2-translate, but at the time you instantiate the `TranslateStaticLoader` you use
-will `LocalizableTranslateStaticLoader` instead.
+The same as detailed on ng2-translate, but at the time you instantiate the `TranslateStaticLoader` you will use
+`LocalizableTranslateStaticLoader` instead.
 
 ```
 @NgModule({
@@ -75,7 +75,7 @@ export function createTranslateLoader(http: Http) {
 export class AppModule { }
 ```
 
-### 2. Initialization of the TranslateService on your application:
+### Initialization of the TranslateService on your application
 At the moment of initialize the TranslateService remember to use the localized version (that should match
 one of the localization files you created). For example:
 
@@ -102,9 +102,9 @@ export class AppComponent {
 }
 ```
 
-### 2. Localization files:
-Identically to ng2-translate you create the translation files, but now you can also add individual localization
-files, for example:
+### Localization files
+Identically to ng2-translate you create the translation files (e.g. es.json, en.json, ..), but now you can
+also add individual localization files (es-UY.json, es-AR.json, ...), for example:
 
 * es.json
     * es-UY.json
