@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Tools for helping in localizations of Angular2 applications.",
   "main": "index",
+  "files": [ "dist" ],
   "scripts": {
-    "test": "N/A"
+    "tsc": "tsc",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
@@ -35,14 +37,11 @@
     "@angular/http": "2.3.1",
     "@angular/platform-browser": "2.3.1",
     "@angular/platform-browser-dynamic": "2.3.1",
+    "@types/node": "^7.0.0",
     "ng2-translate": "5.0.0",
     "rxjs": "5.0.0-rc.4",
     "typescript": "^2.0.10",
     "webpack": "2.1.0-beta.27",
     "zone.js": "0.7.2"
-  },
-  "scripts": {
-    "tsc": "tsc",
-    "prepublish": "tsc"
   }
 }
