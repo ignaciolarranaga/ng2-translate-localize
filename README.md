@@ -102,7 +102,7 @@ export class AppComponent {
 }
 ```
 
-### Localization files
+### Localizated translations
 Identically to ng2-translate you create the translation files (e.g. es.json, en.json, ..), but now you can
 also add individual localization files (es-UY.json, es-AR.json, ...), for example:
 
